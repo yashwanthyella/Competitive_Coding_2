@@ -1,0 +1,14 @@
+// time complexity = O(n) n=length of array
+// space complexity = O(n)
+class Solution {
+    public int[] twoSum(int[] a, int target) {
+        HashMap<Integer,Integer> h1=new HashMap<>();
+        for(int i=0;i<a.length;i++)
+        {
+            if(h1.containsKey(target-a[i]))
+                return new int[]{h1.get(target-a[i]),i};
+             h1.put(a[i],i);
+        }
+        return new int[]{0,0};
+    }
+}
